@@ -15,7 +15,7 @@ pipeline {
               {
                 steps
                   {
-                    sh './build_all.sh'
+                    sh 'mvn -v'
 
 //sh 'export MAVEN_HOME=/var/lib/maven/apache-maven-3.5.3;export PATH=${PATH}:${MAVEN_HOME}/bin;mvn -X clean install -Dmaven.test.failure.ignore=true'
 // def mavenVer = 'mvn -Dexec.executable=\'echo\' -Dexec.args=\'${project.version}\' --non-recursive exec:exec -q'             
