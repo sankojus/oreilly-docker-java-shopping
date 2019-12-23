@@ -1,14 +1,12 @@
-def DOCKER_TAG
-def server = Artifactory.server 'art-2' //server1 is the Server ID given to Artifactory server in Jenkins
 pipeline {
-    agent { label 'cicd-icpstatic-slave' }
+    agent { label 'docker' }
         stages {
            stage('Pull Source code (BITBUCKET) ')
                {
 
                  steps
                   {
-                    git url: 'https://bitbucket.es.ad.adp.com/scm/cicd/pipelineforpoc.git',branch:'ICP', credentialsId: 'getsteamcicd' ;
+                    git url: 'https://github.com/sankojus/oreilly-docker-java-shopping.git',branch:'master', credentialsId: 'git-sankojus' ;
                   }
                }
 
